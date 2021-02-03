@@ -16,7 +16,7 @@ function aj-app-login-ios() {
 }
 function aj-app-login-android() {
   local address="$1" link="$2"
-  adb shell am start -a "android.intent.action.VIEW" -d "exp://$address/--/?link=$link"
+  adb shell am start -a "android.intent.action.VIEW" -d "\"exp://$address/--/?link=$link\""
 }
 alias aj-app-clear-cache="watchman watch-del-all && rm -rf node_modules/ && rm -f package-lock.json && npm install"
 alias aj-app-sync="rsync -va --delete $APPJUSTO_DIR/app/ $APPJUSTO_DIR/app-clone/ --exclude=\".expo/\" --exclude=\".git/*\""
