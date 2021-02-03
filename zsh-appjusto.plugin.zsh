@@ -12,7 +12,7 @@ alias aj-app-consumer="FLAVOR=consumer FIREBASE_EMULATOR=true expo start -c"
 alias aj-app-consumer-live="FLAVOR=consumer expo start"
 function aj-app-login-ios() {
   local address="$1" link="$2"
-  xcrun simctl openurl booted "exp://$address/--/?link=$link$"
+  xcrun simctl openurl booted "exp://$address/--/?link=$link"
 }
 function aj-app-login-android() {
   local address="$1" link="$2"
