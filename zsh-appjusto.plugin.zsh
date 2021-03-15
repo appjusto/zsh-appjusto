@@ -24,6 +24,7 @@ alias aj-app-sync="rsync -va --delete $APPJUSTO_DIR/app/ $APPJUSTO_DIR/app-clone
 # firebase-functions
 alias aj-cd-fb="aj-cd && cd ./firebase-functions/functions"
 alias aj-fb-start="firebase emulators:start --import=$APPJUSTO_DIR/firestore-data/current --export-on-exit"
+alias aj-fb-debug="firebase emulators:start --import=$APPJUSTO_DIR/firestore-data/current --export-on-exit --inspect-functions"
 alias aj-fb-update-config="firebase functions:config:get > .runtimeconfig.json"
 function aj-fb-deploy-function() {
   local name="$1"
